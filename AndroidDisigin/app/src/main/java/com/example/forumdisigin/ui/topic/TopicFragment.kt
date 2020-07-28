@@ -1,4 +1,4 @@
-package com.example.forumdisigin.ui.slideshow
+package com.example.forumdisigin.ui.topic
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.forumdisigin.R
 
-class SlideshowFragment : Fragment() {
+class TopicFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var topicViewModel: TopicViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
+        topicViewModel =
+                ViewModelProviders.of(this).get(TopicViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_topic, container, false)
+        val textView: TextView = root.findViewById(R.id.text_topic)
+        topicViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

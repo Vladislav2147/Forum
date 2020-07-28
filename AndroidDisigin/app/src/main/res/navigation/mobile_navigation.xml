@@ -5,6 +5,29 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+<!--    <fragment-->
+<!--        android:id="@+id/nav_account"-->
+<!--        android:name="com.example.forumdisigin.ui.account.AccountF"-->
+<!--        android:label="@string/menu_account"-->
+<!--        tools:layout="@layout/fragment_account"-->
+<!--        >-->
+<!---->
+<!--    </fragment>-->
+
+<activity
+    android:id="@+id/nav_account2"
+    android:name="com.example.forumdisigin.ui.account.Account"
+    android:label="@string/menu_account"
+    tools:layout="@layout/fragment_account"
+    />
+
+<fragment android:id="@+id/nav_account"
+    android:name="com.example.forumdisigin.ui.account.AccountFragment"
+    android:label="jojo"
+    tools:layout="@layout/fragment_account">
+
+</fragment>
+
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.forumdisigin.ui.home.HomeFragment"
@@ -30,14 +53,14 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.forumdisigin.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_topic"
+        android:name="com.example.forumdisigin.ui.topic.TopicFragment"
         android:label="@string/menu_topic"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_topic" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.forumdisigin.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_tags"
+        android:name="com.example.forumdisigin.ui.tags.TagFragment"
         android:label="@string/menu_tag"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_tag" />
 </navigation>

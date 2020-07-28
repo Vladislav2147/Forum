@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ForumDisigin</string>
+    <string name="app_name">AndroidDisigin</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -14,7 +14,7 @@
     <string name="home_second">Home Second</string>
     <string name="prompt_email">E-mail</string>
     <string name="action_sign_in">Log in</string>
-    <string name="action_sign_in_short">Password must be >5 character</string>
+    <string name="action_sign_in_short">Password must be >8 character</string>
     <string name="prompt_password">Password</string>
     <string name="login_failed">"Login failed"</string>
     <string name="username_login">Login</string>
@@ -24,4 +24,8 @@
     <string name="invalid_password">Password must be >8 characters</string>
     <string name="welcome">"Welcome !"</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="menu_account">Account</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name">First name</string>
+
 </resources>
