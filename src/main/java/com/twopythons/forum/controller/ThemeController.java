@@ -16,4 +16,5 @@ public class ThemeController extends CommonController<ThemeMapper, ThemeServiceI
     public ThemeController(ThemeServiceImpl service, ThemeMapper mapper) {
         super(service, mapper);
     }
+
 }

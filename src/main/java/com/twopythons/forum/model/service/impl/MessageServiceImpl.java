@@ -50,11 +50,7 @@ public class MessageServiceImpl extends ServiceCommonImpl<Message, MessageReposi
 
             }
 
-            userService.getById(userId).ifPresent(user -> {
-
-                message.getUpvotes().add(user);
-
-            });
+            userService.getById(userId).ifPresent(user -> message.getUpvotes().add(user));
 
             repository.save(message);
 
@@ -84,11 +80,7 @@ public class MessageServiceImpl extends ServiceCommonImpl<Message, MessageReposi
 
             }
 
-            userService.getById(userId).ifPresent(user -> {
-
-                message.getDownvotes().add(user);
-
-            });
+            userService.getById(userId).ifPresent(user -> message.getDownvotes().add(user));
 
             repository.save(message);
 

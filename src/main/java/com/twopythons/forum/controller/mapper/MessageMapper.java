@@ -24,9 +24,6 @@ public interface MessageMapper extends CommonMapper<Message, MessageDto> {
     @Mapping(source = "repliedByMessagesId", target = "repliedBy", qualifiedByName = "getMessageById")
     Message dtoToEntity(MessageDto dto);
 
-
-
-
     @AfterMapping
     default void after(@MappingTarget MessageDto dto, Message message) {
         dto.setRating(message.getUpvotes().size() - message.getDownvotes().size());

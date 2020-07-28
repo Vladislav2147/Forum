@@ -22,7 +22,6 @@ public interface ThemeMapper extends CommonMapper<Theme, ThemeDto> {
     @Mapping(source = "authorId", target = "author", qualifiedByName = "getUserById")
     Theme dtoToEntity(ThemeDto dto);
 
-
     @AfterMapping
     default void after(@MappingTarget ThemeDto dto, Theme theme) {
         dto.setRating(theme.getUpvotes().size() - theme.getDownvotes().size());

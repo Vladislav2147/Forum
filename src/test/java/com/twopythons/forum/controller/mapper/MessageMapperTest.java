@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 @RunWith(SpringRunner.class)
@@ -26,7 +27,7 @@ class MessageMapperTest {
 
         MessageDto dto = new MessageDto();
         dto.setId(2L);
-        dto.setDate(new GregorianCalendar(2001, 2,2));
+        dto.setDate(new GregorianCalendar(2001, Calendar.MARCH,2));
         dto.setAuthorId(2L);
         dto.setThemeId(1L);
 

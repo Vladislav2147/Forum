@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Set;
 
 @Data
-@EqualsAndHashCode(exclude = {"downvotedMessages", "upvotedMessages", "downvotedThemes", "upvotedThemes"}, callSuper = false)
+@EqualsAndHashCode(exclude = {"downvotedMessages", "upvotedMessages", "downvotedThemes", "upvotedThemes"})
 @Entity
 @Table(name = "user")
 public class User extends AbstractEntity implements UserDetails {

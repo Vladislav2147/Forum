@@ -74,11 +74,7 @@ public class ThemeServiceImpl extends ServiceCommonImpl<Theme, ThemeRepository> 
 
             }
 
-            userService.getById(userId).ifPresent(user -> {
-
-                theme.getUpvotes().add(user);
-
-            });
+            userService.getById(userId).ifPresent(user -> theme.getUpvotes().add(user));
 
             repository.save(theme);
 
@@ -107,11 +103,7 @@ public class ThemeServiceImpl extends ServiceCommonImpl<Theme, ThemeRepository> 
 
             }
 
-            userService.getById(userId).ifPresent(user -> {
-
-                theme.getDownvotes().add(user);
-
-            });
+            userService.getById(userId).ifPresent(user -> theme.getDownvotes().add(user));
 
             repository.save(theme);
 

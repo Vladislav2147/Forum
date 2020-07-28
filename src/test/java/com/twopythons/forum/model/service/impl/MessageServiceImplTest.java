@@ -64,4 +64,5 @@ class MessageServiceImplTest {
     private int messageRating(Message message) {
         return message.getUpvotes().size() - message.getDownvotes().size();
     }
+
 }

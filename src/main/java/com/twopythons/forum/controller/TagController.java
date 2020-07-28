@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("tags")
 public class TagController extends CommonController<TagMapper, TagServiceImpl, TagDto, Tag> {
+
     @Autowired
     public TagController(TagServiceImpl service, TagMapper mapper) {
         super(service, mapper);
     }
+
 }

@@ -17,8 +17,8 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl extends ServiceCommonImpl<User, UserRepository> implements UserDetailsService {
 
-    private RoleRepository roleRepository;
-    private BCryptPasswordEncoder encoder;
+    private final RoleRepository roleRepository;
+    private final BCryptPasswordEncoder encoder;
 
     @Autowired
     public UserServiceImpl(UserRepository repository, RoleRepository roleRepository, BCryptPasswordEncoder encoder) {

@@ -28,7 +28,7 @@ public abstract class CommonController <M extends CommonMapper<E, D>, S extends 
 
     @GetMapping(value = {"/{id}"})
     public D findById(@PathVariable("id") Long id) {
-        return mapper.entityToDto(service.getById(id).get());
+        return mapper.entityToDto(service.getById(id).orElse(null));
     }
 
     @PostMapping("/add")

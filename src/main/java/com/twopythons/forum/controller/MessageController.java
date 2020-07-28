@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("messages")
 public class MessageController extends CommonController<MessageMapper, MessageServiceImpl, MessageDto, Message> {
+
     @Autowired
     public MessageController(MessageServiceImpl service, MessageMapper mapper) {
         super(service, mapper);
     }
+
 }

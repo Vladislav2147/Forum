@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("users")
 public class UserController extends CommonController<UserMapper, UserServiceImpl, UserDto, User> {
+
     @Autowired
     public UserController(UserServiceImpl service, UserMapper mapper) {
         super(service, mapper);
     }
+
 }

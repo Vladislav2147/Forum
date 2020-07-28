@@ -8,7 +8,7 @@ import java.util.Collection;
 @Data
 public class TagDto extends AbstractDto {
 
-    @Pattern(regexp = "\\W(\\#[a-zA-Z]+\\b)(?!;)")
+    @Pattern(regexp = "\\W(#[a-zA-Z]+\\b)(?!;)")
     private String name;
     private Collection<Long> themesId;
 

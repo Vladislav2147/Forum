@@ -39,17 +39,17 @@ public class UserServiceImplTest {
     @Test
     public void banUnbanById() {
 
-        Boolean notBanned;
+        boolean notBanned;
 
         userService.banById(1L);
         notBanned = userService.getById(1L).orElse(new User()).isAccountNonLocked();
 
-        Assert.assertEquals(false, notBanned);
+        Assert.assertFalse(notBanned);
 
         userService.unbanById(1L);
         notBanned = userService.getById(1L).orElse(new User()).isAccountNonLocked();
 
-        Assert.assertEquals(true, notBanned);
+        Assert.assertTrue(notBanned);
 
     }
 
