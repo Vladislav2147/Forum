@@ -1,30 +1,23 @@
 package com.example.forumdisigin
 
-import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import com.example.forumdisigin.ui.login.LoginActivity
-import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageView
-import com.bumptech.glide.Glide
+import com.example.forumdisigin.data.model.HttpManager
+import com.example.forumdisigin.data.model.dto.TagDto
 import com.example.forumdisigin.ui.account.Account
-import kotlinx.android.synthetic.main.fragment_account.*
+import com.example.forumdisigin.ui.login.LoginActivity
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -68,7 +61,9 @@ class MainActivity : AppCompatActivity() {
     fun fuck(view: View) {
         val intent = Intent(this@MainActivity, Account::class.java)
         startActivity(intent)
+
     }
+
 
 
 //

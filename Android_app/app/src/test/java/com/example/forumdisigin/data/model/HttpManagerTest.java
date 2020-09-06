@@ -1,34 +1,25 @@
 package com.example.forumdisigin.data.model;
 
-import android.app.Application;
-import android.content.res.Resources;
-import android.provider.Settings;
-
-import com.example.forumdisigin.R;
+import com.example.forumdisigin.data.model.dto.MessageDto;
+import com.example.forumdisigin.data.model.dto.TagDto;
+import com.example.forumdisigin.data.model.dto.ThemeDto;
 import com.example.forumdisigin.data.model.dto.UserDto;
-import com.example.forumdisigin.data.model.httpmanager.HttpManager;
-import com.example.forumdisigin.data.model.httpmanager.UserManager;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class HttpManagerTest {
 
     @Test
-    public void tryMethod() throws JsonProcessingException, ClassNotFoundException {
+    public void tryMethod() {
 
-        UserManager manager = new UserManager();
+        HttpManager manager = new HttpManager();
 
- //       UserDto userDto = manager.getAll().stream().findFirst().orElse(new UserDto());
+        TagDto tagDto = manager.getAll(TagDto[].class)[1];
 
+        System.out.println("id " + tagDto.getId() + " name " + tagDto.getName());
 
-        UserDto userDto = manager.getById(7L);
-        System.out.println("username: " + userDto.getLogin() + "; email: " + userDto.getEmail() + "; id: " + userDto.getId());
-
-        userDto.setEmail("mailmymail@gmail.com");
-        userDto.setLogin("vasya322");
-        userDto.setPassword("notvasyaincase");
-        System.out.println(manager.add(userDto));
 
     }
 }
